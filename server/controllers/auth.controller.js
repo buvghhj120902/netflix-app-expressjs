@@ -1,9 +1,9 @@
 import userModel from "../models/user.model.js"
 import jwt from 'jsonwebtoken'
-import bcrypt from 'bcryptjs'
 import CryptoJS from "crypto-js"
 import { createError } from "../utils/error.js"
 
+//Register
 export const register = async (req, res, next) => {
 
     try {
@@ -30,6 +30,7 @@ export const register = async (req, res, next) => {
 
 }
 
+//Login
 export const login = async (req, res, next) => {
 
     try {

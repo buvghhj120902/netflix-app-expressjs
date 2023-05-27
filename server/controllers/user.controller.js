@@ -2,7 +2,7 @@ import userModel from "../models/user.model.js"
 import { createError } from "../utils/error.js"
 import CryptoJS from "crypto-js"
 
-
+//Update user
 export const updateUser = async (req, res, next) => {
 
     try {
@@ -43,6 +43,7 @@ export const updateUser = async (req, res, next) => {
 
 }
 
+//Delete user
 export const deleteUser = async (req, res, next) => {
 
     if (req.user.isAdmin) {

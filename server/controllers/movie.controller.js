@@ -1,6 +1,7 @@
 import movieModel from "../models/movie.model.js"
 import { createError } from "../utils/error.js"
 
+//Add movie
 export const addMovie = async (req, res, next) => {
 
     if (req.user.isAdmin) {
@@ -29,6 +30,7 @@ export const addMovie = async (req, res, next) => {
 
 }
 
+//Update movie
 export const updateMoive = async (req, res, next) => {
 
     if (req.user.isAdmin) {
@@ -61,6 +63,7 @@ export const updateMoive = async (req, res, next) => {
 
 }
 
+//Delete movie
 export const deleteMovie = async (req, res, next) => {
 
     if (req.user.isAdmin) {
@@ -85,6 +88,7 @@ export const deleteMovie = async (req, res, next) => {
 
 }
 
+//Get a movie
 export const getMovie = async (req, res, next) => {
 
     try {
@@ -101,6 +105,7 @@ export const getMovie = async (req, res, next) => {
 
 }
 
+//Get all movies
 export const getMovies = async (req, res, next) => {
 
     if (req.user.isAdmin) {
@@ -125,6 +130,7 @@ export const getMovies = async (req, res, next) => {
 
 }
 
+//Get random movies
 export const getRandomMovie = async (req, res, next) => {
 
     const type = req.query.type

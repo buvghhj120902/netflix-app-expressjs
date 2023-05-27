@@ -1,7 +1,7 @@
 import listModel from "../models/list.model.js"
 import { createError } from "../utils/error.js"
 
-
+//Create list
 export const addList = async (req, res, next) => {
 
     if (req.user.isAdmin) {
@@ -20,6 +20,7 @@ export const addList = async (req, res, next) => {
 
 }
 
+//Delete list
 export const deleteList = async (req, res, next) => {
 
     if (req.user.isAdmin) {
@@ -36,6 +37,7 @@ export const deleteList = async (req, res, next) => {
 
 }
 
+//Get all lists
 export const getLists = async (req, res, next) => {
 
     const typeQuery = req.query.type
@@ -110,6 +112,7 @@ export const getLists = async (req, res, next) => {
 
 }
 
+//Get a list
 export const getList = async (req, res, next) => {
 
     try {
